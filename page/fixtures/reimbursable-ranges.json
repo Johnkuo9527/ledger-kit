@@ -1,0 +1,17 @@
+{
+	"ok": true,
+	"ranges": [
+		{
+			"id": "rr-demo-1",
+			"start_date": "2026-09-22",
+			"end_date": "2026-09-24",
+			"note": "Client visit"
+		},
+		{
+			"id": "rr-demo-2",
+			"start_date": "2026-08-04",
+			"end_date": "2026-08-06",
+			"note": "Bangkok business trip"
+		}
+	]
+}

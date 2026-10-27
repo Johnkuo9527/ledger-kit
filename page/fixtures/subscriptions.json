@@ -1,0 +1,203 @@
+{
+	"ok": true,
+	"subscriptions": [
+		{
+			"id": "sub-demo-netflix",
+			"merchant": "Netflix",
+			"cadence": "monthly",
+			"amount": {
+				"currency": "SGD",
+				"minor": 2598,
+				"display": "SGD 25.98"
+			},
+			"previous_amount": {
+				"currency": "SGD",
+				"minor": 2298,
+				"display": "SGD 22.98"
+			},
+			"price_changed_on": "2026-09-02",
+			"last_charged": "2026-10-05",
+			"next_renewal": "2026-11-02",
+			"occurrences": 12,
+			"status": "active",
+			"status_by": "detection",
+			"marked_by": null,
+			"monthly_equivalent": {
+				"currency": "SGD",
+				"minor": 2598,
+				"display": "SGD 25.98"
+			}
+		},
+		{
+			"id": "sub-demo-gym",
+			"merchant": "Anytime Fitness",
+			"cadence": "monthly",
+			"amount": {
+				"currency": "SGD",
+				"minor": 9800,
+				"display": "SGD 98.00"
+			},
+			"previous_amount": null,
+			"price_changed_on": null,
+			"last_charged": "2026-10-07",
+			"next_renewal": "2026-11-07",
+			"occurrences": 3,
+			"status": "active",
+			"status_by": "detection",
+			"marked_by": null,
+			"monthly_equivalent": {
+				"currency": "SGD",
+				"minor": 9800,
+				"display": "SGD 98.00"
+			}
+		},
+		{
+			"id": "sub-demo-openai",
+			"merchant": "OpenAI",
+			"cadence": "monthly",
+			"amount": {
+				"currency": "USD",
+				"minor": 2000,
+				"display": "USD 20.00"
+			},
+			"previous_amount": null,
+			"price_changed_on": null,
+			"last_charged": "2026-09-10",
+			"next_renewal": "2026-10-10",
+			"occurrences": 19,
+			"status": "active",
+			"status_by": "detection",
+			"marked_by": null,
+			"monthly_equivalent": {
+				"currency": "USD",
+				"minor": 2000,
+				"display": "USD 20.00"
+			}
+		},
+		{
+			"id": "sub-demo-spotify",
+			"merchant": "Spotify",
+			"cadence": "monthly",
+			"amount": {
+				"currency": "SGD",
+				"minor": 1199,
+				"display": "SGD 11.99"
+			},
+			"previous_amount": null,
+			"price_changed_on": null,
+			"last_charged": "2026-09-03",
+			"next_renewal": "2026-10-03",
+			"occurrences": 28,
+			"status": "active",
+			"status_by": "detection",
+			"marked_by": null,
+			"monthly_equivalent": {
+				"currency": "SGD",
+				"minor": 1199,
+				"display": "SGD 11.99"
+			}
+		},
+		{
+			"id": "sub-demo-icloud",
+			"merchant": "Apple iCloud",
+			"cadence": "monthly",
+			"amount": {
+				"currency": "SGD",
+				"minor": 398,
+				"display": "SGD 3.98"
+			},
+			"previous_amount": null,
+			"price_changed_on": null,
+			"last_charged": "2026-09-25",
+			"next_renewal": "2026-10-25",
+			"occurrences": 45,
+			"status": "active",
+			"status_by": "detection",
+			"marked_by": null,
+			"monthly_equivalent": {
+				"currency": "SGD",
+				"minor": 398,
+				"display": "SGD 3.98"
+			}
+		},
+		{
+			"id": "sub-demo-notion",
+			"merchant": "Notion",
+			"cadence": "yearly",
+			"amount": {
+				"currency": "USD",
+				"minor": 9600,
+				"display": "USD 96.00"
+			},
+			"previous_amount": {
+				"currency": "USD",
+				"minor": 9600,
+				"display": "USD 96.00"
+			},
+			"price_changed_on": null,
+			"last_charged": "2025-11-20",
+			"next_renewal": "2026-11-20",
+			"occurrences": 2,
+			"status": "active",
+			"status_by": "detection",
+			"marked_by": null,
+			"monthly_equivalent": {
+				"currency": "USD",
+				"minor": 800,
+				"display": "USD 8.00"
+			}
+		},
+		{
+			"id": "sub-demo-disney",
+			"merchant": "Disney+",
+			"cadence": "monthly",
+			"amount": {
+				"currency": "SGD",
+				"minor": 1198,
+				"display": "SGD 11.98"
+			},
+			"previous_amount": null,
+			"price_changed_on": null,
+			"last_charged": "2026-05-14",
+			"next_renewal": "2026-06-14",
+			"occurrences": 16,
+			"status": "lapsed",
+			"status_by": "detection",
+			"marked_by": null,
+			"monthly_equivalent": {
+				"currency": "SGD",
+				"minor": 1198,
+				"display": "SGD 11.98"
+			}
+		},
+		{
+			"id": "sub-demo-grab",
+			"merchant": "Grab Unlimited",
+			"cadence": "monthly",
+			"amount": {
+				"currency": "SGD",
+				"minor": 399,
+				"display": "SGD 3.99"
+			},
+			"previous_amount": null,
+			"price_changed_on": null,
+			"last_charged": "2026-10-01",
+			"next_renewal": "2026-11-01",
+			"occurrences": 15,
+			"status": "ignored",
+			"status_by": "owner",
+			"marked_by": null,
+			"monthly_equivalent": {
+				"currency": "SGD",
+				"minor": 399,
+				"display": "SGD 3.99"
+			}
+		}
+	],
+	"monthly_total_home": {
+		"currency": "SGD",
+		"minor": 17641,
+		"display": "SGD 176.41"
+	},
+	"monthly_total_missing": 0
+}

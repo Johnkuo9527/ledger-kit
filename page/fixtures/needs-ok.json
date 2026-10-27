@@ -1,0 +1,333 @@
+{
+	"ok": true,
+	"trips": [
+		{
+			"id": "trip-demo-kl",
+			"name": null,
+			"destination": "Kuala Lumpur, MY",
+			"countries": [
+				"MY"
+			],
+			"start_date": "2026-10-02",
+			"end_date": "2026-10-04",
+			"status": "proposed",
+			"total_home": {
+				"currency": "SGD",
+				"minor": 30062,
+				"display": "SGD 300.62"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 1162,
+				"display": "SGD 11.62"
+			},
+			"line_count": 2,
+			"reimbursable_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			}
+		}
+	],
+	"held_taps": [
+		{
+			"evidence_id": "ev-demo-held-1",
+			"card": "travelcard",
+			"merchant": "7-Eleven",
+			"amount": {
+				"currency": "SGD",
+				"minor": 560,
+				"display": "SGD 5.60"
+			},
+			"date": "2026-10-06",
+			"time": "21:14",
+			"received_at": "2026-10-06T13:14:09.000Z"
+		}
+	],
+	"lines": [
+		{
+			"id": "ln-demo-038",
+			"date": "2026-09-30",
+			"account": {
+				"id": "acc-demo-dbs-debit",
+				"name": "DBS debit card",
+				"kind": "debit_card",
+				"institution": "DBS"
+			},
+			"kind": "purchase",
+			"state": "review",
+			"spending": true,
+			"provisional": true,
+			"merchant": {
+				"name": "Kopitiam",
+				"raw": "KOPITIAM",
+				"country": "SG"
+			},
+			"category": "dining",
+			"amount": {
+				"original": {
+					"currency": "SGD",
+					"minor": 1150,
+					"display": "SGD 11.50"
+				},
+				"billed": {
+					"currency": "SGD",
+					"minor": 1150,
+					"display": "SGD 11.50",
+					"status": "exact"
+				},
+				"home": {
+					"currency": "SGD",
+					"minor": 1150,
+					"display": "SGD 11.50",
+					"status": "exact",
+					"set_by": "rules"
+				},
+				"overseas_fee": null
+			},
+			"fx": null,
+			"flags": [
+				"needs_review"
+			],
+			"evidence": [
+				"alert"
+			],
+			"refund_of": null,
+			"income_offset": null,
+			"transfer_group": null,
+			"statement_id": null,
+			"trip_id": null,
+			"reimbursable": {
+				"effective": false,
+				"source": null,
+				"range_id": null
+			},
+			"note": null,
+			"credit": null
+		},
+		{
+			"id": "ln-demo-037",
+			"date": "2026-09-30",
+			"account": {
+				"id": "acc-demo-taishin-b",
+				"name": "Taishin card B",
+				"kind": "credit_card",
+				"institution": "Taishin"
+			},
+			"kind": "purchase",
+			"state": "open",
+			"spending": true,
+			"provisional": true,
+			"merchant": {
+				"name": "FamilyMart",
+				"raw": "FAMILYMART",
+				"country": "TW"
+			},
+			"category": "groceries",
+			"amount": {
+				"original": {
+					"currency": "TWD",
+					"minor": 18500,
+					"display": "TWD 185.00"
+				},
+				"billed": {
+					"currency": "TWD",
+					"minor": 18500,
+					"display": "TWD 185.00",
+					"status": "exact"
+				},
+				"home": {
+					"currency": "SGD",
+					"minor": 0,
+					"display": "SGD 0.00",
+					"status": "reference",
+					"set_by": "rules"
+				},
+				"overseas_fee": null
+			},
+			"fx": null,
+			"flags": [
+				"no_rate"
+			],
+			"evidence": [
+				"apple_pay_shortcut"
+			],
+			"refund_of": null,
+			"income_offset": null,
+			"transfer_group": null,
+			"statement_id": null,
+			"trip_id": null,
+			"reimbursable": {
+				"effective": false,
+				"source": null,
+				"range_id": null
+			},
+			"note": null,
+			"credit": null
+		},
+		{
+			"id": "ln-demo-030",
+			"date": "2026-09-27",
+			"account": {
+				"id": "acc-demo-citi",
+				"name": "Citi card",
+				"kind": "credit_card",
+				"institution": "Citi"
+			},
+			"kind": "refund",
+			"state": "posted",
+			"spending": true,
+			"provisional": false,
+			"merchant": {
+				"name": "Amazon SG",
+				"raw": "AMAZON SG",
+				"country": "SG"
+			},
+			"category": "shopping",
+			"amount": {
+				"original": {
+					"currency": "SGD",
+					"minor": -1200,
+					"display": "−SGD 12.00"
+				},
+				"billed": {
+					"currency": "SGD",
+					"minor": -1200,
+					"display": "−SGD 12.00",
+					"status": "exact"
+				},
+				"home": {
+					"currency": "SGD",
+					"minor": -1200,
+					"display": "−SGD 12.00",
+					"status": "exact",
+					"set_by": "rules"
+				},
+				"overseas_fee": null
+			},
+			"fx": null,
+			"flags": [
+				"unlinked_refund"
+			],
+			"evidence": [
+				"statement_line"
+			],
+			"refund_of": null,
+			"income_offset": null,
+			"transfer_group": null,
+			"statement_id": "st-demo-citi-0930",
+			"trip_id": null,
+			"reimbursable": {
+				"effective": false,
+				"source": null,
+				"range_id": null
+			},
+			"note": null,
+			"credit": null
+		},
+		{
+			"id": "ln-demo-024",
+			"date": "2026-09-11",
+			"account": {
+				"id": "acc-demo-hsbc-a",
+				"name": "HSBC card A",
+				"kind": "credit_card",
+				"institution": "HSBC"
+			},
+			"kind": "purchase",
+			"state": "open",
+			"spending": true,
+			"provisional": true,
+			"merchant": {
+				"name": "Marina Hotel deposit",
+				"raw": "MARINA HOTEL DEPOSIT",
+				"country": "SG"
+			},
+			"category": "lodging",
+			"amount": {
+				"original": {
+					"currency": "SGD",
+					"minor": 5800,
+					"display": "SGD 58.00"
+				},
+				"billed": {
+					"currency": "SGD",
+					"minor": 5800,
+					"display": "SGD 58.00",
+					"status": "exact"
+				},
+				"home": {
+					"currency": "SGD",
+					"minor": 5800,
+					"display": "SGD 58.00",
+					"status": "exact",
+					"set_by": "rules"
+				},
+				"overseas_fee": null
+			},
+			"fx": null,
+			"flags": [
+				"not_on_statement"
+			],
+			"evidence": [
+				"alert"
+			],
+			"refund_of": null,
+			"income_offset": null,
+			"transfer_group": null,
+			"statement_id": null,
+			"trip_id": null,
+			"reimbursable": {
+				"effective": false,
+				"source": null,
+				"range_id": null
+			},
+			"note": null,
+			"credit": null
+		}
+	],
+	"months": [
+		{
+			"statement_id": "st-demo-citi-0930",
+			"account_id": "acc-demo-citi",
+			"period_start": "2026-09-01",
+			"period_end": "2026-09-30",
+			"status": "escalated",
+			"checked_at": "2026-10-08T22:10:00.000Z",
+			"expected": {
+				"currency": "SGD",
+				"minor": 61377,
+				"display": "SGD 613.77"
+			},
+			"ledger": {
+				"currency": "SGD",
+				"minor": 60177,
+				"display": "SGD 601.77"
+			},
+			"difference": {
+				"currency": "SGD",
+				"minor": -1200,
+				"display": "−SGD 12.00"
+			},
+			"problems": [
+				{
+					"code": "ledger_mismatch",
+					"message": "the ledger is SGD 12.00 short of the statement",
+					"ids": []
+				},
+				{
+					"code": "unmatched_statement_line",
+					"message": "one statement line has no ledger line yet",
+					"ids": [
+						"ev-demo-1"
+					]
+				}
+			],
+			"bill_check": null,
+			"bill": null,
+			"reviewed_at": null
+		}
+	],
+	"other_held": 1,
+	"count": 7
+}

@@ -1,0 +1,77 @@
+{
+	"ok": true,
+	"accounts": [
+		{
+			"id": "acc-demo-dbs",
+			"name": "DBS account",
+			"kind": "bank",
+			"institution": "DBS",
+			"currency": "SGD",
+			"active": true,
+			"wallet_names": []
+		},
+		{
+			"id": "acc-demo-dbs-debit",
+			"name": "DBS debit card",
+			"kind": "debit_card",
+			"institution": "DBS",
+			"currency": "SGD",
+			"active": true,
+			"wallet_names": []
+		},
+		{
+			"id": "acc-demo-hsbc-a",
+			"name": "HSBC card A",
+			"kind": "credit_card",
+			"institution": "HSBC",
+			"currency": "SGD",
+			"active": true,
+			"wallet_names": []
+		},
+		{
+			"id": "acc-demo-hsbc-b",
+			"name": "HSBC card B",
+			"kind": "credit_card",
+			"institution": "HSBC",
+			"currency": "SGD",
+			"active": true,
+			"wallet_names": []
+		},
+		{
+			"id": "acc-demo-citi",
+			"name": "Citi card",
+			"kind": "credit_card",
+			"institution": "Citi",
+			"currency": "SGD",
+			"active": true,
+			"wallet_names": []
+		},
+		{
+			"id": "acc-demo-taishin-a",
+			"name": "Taishin card A",
+			"kind": "credit_card",
+			"institution": "Taishin",
+			"currency": "TWD",
+			"active": true,
+			"wallet_names": []
+		},
+		{
+			"id": "acc-demo-taishin-b",
+			"name": "Taishin card B",
+			"kind": "credit_card",
+			"institution": "Taishin",
+			"currency": "TWD",
+			"active": true,
+			"wallet_names": []
+		},
+		{
+			"id": "acc-demo-cash",
+			"name": "Cash",
+			"kind": "cash",
+			"institution": "Cash",
+			"currency": "SGD",
+			"active": true,
+			"wallet_names": []
+		}
+	]
+}

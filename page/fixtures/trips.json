@@ -1,0 +1,86 @@
+{
+	"ok": true,
+	"trips": [
+		{
+			"id": "trip-demo-japan",
+			"name": "Japan: Tokyo + Osaka",
+			"destination": "Tokyo, JP",
+			"countries": [
+				"JP"
+			],
+			"start_date": "2026-09-12",
+			"end_date": "2026-09-19",
+			"status": "confirmed",
+			"total_home": {
+				"currency": "SGD",
+				"minor": 307484,
+				"display": "SGD 3,074.84"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 79599,
+				"display": "SGD 795.99"
+			},
+			"line_count": 11,
+			"reimbursable_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			}
+		},
+		{
+			"id": "trip-demo-taipei",
+			"name": "Taipei",
+			"destination": "Taipei, TW",
+			"countries": [
+				"TW"
+			],
+			"start_date": "2026-07-09",
+			"end_date": "2026-07-12",
+			"status": "confirmed",
+			"total_home": {
+				"currency": "SGD",
+				"minor": 55132,
+				"display": "SGD 551.32"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 13932,
+				"display": "SGD 139.32"
+			},
+			"line_count": 3,
+			"reimbursable_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			}
+		},
+		{
+			"id": "trip-demo-kl",
+			"name": null,
+			"destination": "Kuala Lumpur, MY",
+			"countries": [
+				"MY"
+			],
+			"start_date": "2026-10-02",
+			"end_date": "2026-10-04",
+			"status": "proposed",
+			"total_home": {
+				"currency": "SGD",
+				"minor": 30062,
+				"display": "SGD 300.62"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 1162,
+				"display": "SGD 11.62"
+			},
+			"line_count": 2,
+			"reimbursable_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			}
+		}
+	]
+}

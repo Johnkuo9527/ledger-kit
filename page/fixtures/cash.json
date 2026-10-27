@@ -1,0 +1,61 @@
+{
+	"ok": true,
+	"line": {
+		"id": "ln-demo-007",
+		"date": "2026-09-13",
+		"account": {
+			"id": "acc-demo-cash",
+			"name": "Cash",
+			"kind": "cash",
+			"institution": "Cash"
+		},
+		"kind": "purchase",
+		"state": "open",
+		"spending": true,
+		"provisional": false,
+		"merchant": {
+			"name": "Ichiran Ramen",
+			"raw": "ICHIRAN RAMEN",
+			"country": "JP"
+		},
+		"category": "dining",
+		"amount": {
+			"original": {
+				"currency": "JPY",
+				"minor": 1200,
+				"display": "JPY 1,200"
+			},
+			"billed": {
+				"currency": "JPY",
+				"minor": 1200,
+				"display": "JPY 1,200",
+				"status": "exact"
+			},
+			"home": {
+				"currency": "SGD",
+				"minor": 1086,
+				"display": "SGD 10.86",
+				"status": "reference",
+				"set_by": "rules"
+			},
+			"overseas_fee": null
+		},
+		"fx": null,
+		"flags": [],
+		"evidence": [
+			"manual"
+		],
+		"refund_of": null,
+		"income_offset": null,
+		"transfer_group": null,
+		"statement_id": null,
+		"trip_id": "trip-demo-japan",
+		"reimbursable": {
+			"effective": false,
+			"source": null,
+			"range_id": null
+		},
+		"note": null,
+		"credit": null
+	}
+}

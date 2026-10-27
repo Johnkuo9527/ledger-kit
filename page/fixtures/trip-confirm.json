@@ -1,0 +1,159 @@
+{
+	"ok": true,
+	"trip": {
+		"id": "trip-demo-kl",
+		"name": null,
+		"destination": "Kuala Lumpur, MY",
+		"countries": [
+			"MY"
+		],
+		"start_date": "2026-10-02",
+		"end_date": "2026-10-04",
+		"status": "confirmed",
+		"total_home": {
+			"currency": "SGD",
+			"minor": 30062,
+			"display": "SGD 300.62"
+		},
+		"unconfirmed_home": {
+			"currency": "SGD",
+			"minor": 1162,
+			"display": "SGD 11.62"
+		},
+		"line_count": 2,
+		"reimbursable_home": {
+			"currency": "SGD",
+			"minor": 0,
+			"display": "SGD 0.00"
+		}
+	},
+	"lines": [
+		{
+			"id": "ln-demo-041",
+			"date": "2026-10-03",
+			"account": {
+				"id": "acc-demo-citi",
+				"name": "Citi card",
+				"kind": "credit_card",
+				"institution": "Citi"
+			},
+			"kind": "purchase",
+			"state": "open",
+			"spending": true,
+			"provisional": true,
+			"merchant": {
+				"name": "Grab Malaysia",
+				"raw": "GRAB MALAYSIA",
+				"country": "MY"
+			},
+			"category": "transport",
+			"amount": {
+				"original": {
+					"currency": "MYR",
+					"minor": 3800,
+					"display": "MYR 38.00"
+				},
+				"billed": {
+					"currency": "SGD",
+					"minor": 1162,
+					"display": "SGD 11.62",
+					"status": "estimate"
+				},
+				"home": {
+					"currency": "SGD",
+					"minor": 1162,
+					"display": "SGD 11.62",
+					"status": "estimate",
+					"set_by": "rules"
+				},
+				"overseas_fee": {
+					"currency": "SGD",
+					"minor": 37,
+					"display": "SGD 0.37"
+				}
+			},
+			"fx": {
+				"market_rate": 0.2961,
+				"markup": 0.0331,
+				"markup_source": "learned",
+				"effective_rate": null,
+				"observed_markup": null
+			},
+			"flags": [],
+			"evidence": [
+				"alert"
+			],
+			"refund_of": null,
+			"income_offset": null,
+			"transfer_group": null,
+			"statement_id": null,
+			"trip_id": "trip-demo-kl",
+			"reimbursable": {
+				"effective": false,
+				"source": null,
+				"range_id": null
+			},
+			"note": null,
+			"credit": null
+		},
+		{
+			"id": "ln-demo-039",
+			"date": "2026-10-02",
+			"account": {
+				"id": "acc-demo-hsbc-a",
+				"name": "HSBC card A",
+				"kind": "credit_card",
+				"institution": "HSBC"
+			},
+			"kind": "purchase",
+			"state": "open",
+			"spending": true,
+			"provisional": true,
+			"merchant": {
+				"name": "Scoot",
+				"raw": "SCOOT",
+				"country": "SG"
+			},
+			"category": "flights",
+			"amount": {
+				"original": {
+					"currency": "SGD",
+					"minor": 28900,
+					"display": "SGD 289.00"
+				},
+				"billed": {
+					"currency": "SGD",
+					"minor": 28900,
+					"display": "SGD 289.00",
+					"status": "exact"
+				},
+				"home": {
+					"currency": "SGD",
+					"minor": 28900,
+					"display": "SGD 289.00",
+					"status": "exact",
+					"set_by": "rules"
+				},
+				"overseas_fee": null
+			},
+			"fx": null,
+			"flags": [],
+			"evidence": [
+				"alert",
+				"receipt"
+			],
+			"refund_of": null,
+			"income_offset": null,
+			"transfer_group": null,
+			"statement_id": null,
+			"trip_id": "trip-demo-kl",
+			"reimbursable": {
+				"effective": false,
+				"source": null,
+				"range_id": null
+			},
+			"note": null,
+			"credit": null
+		}
+	]
+}

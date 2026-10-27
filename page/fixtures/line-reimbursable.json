@@ -1,0 +1,61 @@
+{
+	"ok": true,
+	"line": {
+		"id": "ln-demo-026",
+		"date": "2026-09-23",
+		"account": {
+			"id": "acc-demo-hsbc-b",
+			"name": "HSBC card B",
+			"kind": "credit_card",
+			"institution": "HSBC"
+		},
+		"kind": "purchase",
+		"state": "open",
+		"spending": true,
+		"provisional": true,
+		"merchant": {
+			"name": "Grab",
+			"raw": "GRAB",
+			"country": "SG"
+		},
+		"category": "transport",
+		"amount": {
+			"original": {
+				"currency": "SGD",
+				"minor": 2460,
+				"display": "SGD 24.60"
+			},
+			"billed": {
+				"currency": "SGD",
+				"minor": 2460,
+				"display": "SGD 24.60",
+				"status": "exact"
+			},
+			"home": {
+				"currency": "SGD",
+				"minor": 2460,
+				"display": "SGD 24.60",
+				"status": "exact",
+				"set_by": "rules"
+			},
+			"overseas_fee": null
+		},
+		"fx": null,
+		"flags": [],
+		"evidence": [
+			"alert"
+		],
+		"refund_of": null,
+		"income_offset": null,
+		"transfer_group": null,
+		"statement_id": null,
+		"trip_id": null,
+		"reimbursable": {
+			"effective": true,
+			"source": "range",
+			"range_id": "rr-demo-1"
+		},
+		"note": null,
+		"credit": null
+	}
+}

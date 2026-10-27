@@ -1,0 +1,109 @@
+{
+	"_about": "EXAMPLE accounts with made-up digits. Copy this file to seed/accounts.json (gitignored), replace the examples with your own cards and accounts, then run `npm run seed:sql` (INSTALL.md step 3); the setup script loads it at its stage 8. Delete every example you do not have. Field guide: docs/accounts.md.",
+	"_banks": "Your banks, and EVERY mail domain each one sends alerts and statements from. Only mail from these domains, vouched for by Gmail, is ever read as a bank's (docs/adding-a-bank.md). These four are examples (they also have built-in alert readers); replace them with yours.",
+	"banks": [
+		{ "institution": "dbs", "name": "DBS", "domains": ["dbs.com", "dbs.com.sg", "posb.com.sg"], "sender_names": ["ibanking", "digibank", "paylah", "posb"] },
+		{ "institution": "hsbc", "name": "HSBC", "domains": ["hsbc.com.sg", "hsbc.com", "hsbc.com.hk"], "sender_names": ["hsbc"] },
+		{ "institution": "citi", "name": "Citi", "domains": ["citibank.com.sg", "citibank.com", "citi.com"] },
+		{ "institution": "taishin", "name": "台新 Taishin", "domains": ["taishinbank.com.tw"], "sender_names": ["Richart"] }
+	],
+	"accounts": [
+		{
+			"id": "dbs-bank",
+			"institution": "dbs",
+			"kind": "bank",
+			"name": "DBS account 0001",
+			"last4": "0001",
+			"currency": "SGD"
+		},
+		{
+			"id": "dbs-debit",
+			"institution": "dbs",
+			"kind": "debit_card",
+			"name": "DBS debit card",
+			"last4": "0002",
+			"currency": "SGD",
+			"settles_to": "dbs-bank",
+			"wallet_names": []
+		},
+		{
+			"id": "hsbc-card",
+			"institution": "hsbc",
+			"kind": "credit_card",
+			"name": "HSBC card 0003",
+			"last4": "0003",
+			"currency": "SGD",
+			"wallet_names": ["HSBC Example Card"]
+		},
+		{
+			"id": "citi-card",
+			"institution": "citi",
+			"kind": "credit_card",
+			"name": "Citi card 0004",
+			"last4": "0004",
+			"currency": "SGD",
+			"wallet_names": [],
+			"has_statements": false
+		},
+		{
+			"id": "taishin-old",
+			"institution": "taishin",
+			"kind": "credit_card",
+			"name": "台新 card 0005 (lost, replaced by 0006)",
+			"last4": "0005",
+			"currency": "TWD",
+			"wallet_names": [],
+			"alerts_expected": false,
+			"active": false,
+			"replaced_by": "taishin-card"
+		},
+		{
+			"id": "taishin-card",
+			"institution": "taishin",
+			"kind": "credit_card",
+			"name": "台新 card 0006",
+			"last4": "0006",
+			"currency": "TWD",
+			"wallet_names": [],
+			"alerts_expected": false
+		},
+		{
+			"id": "grabpay",
+			"institution": "grab",
+			"kind": "wallet",
+			"name": "GrabPay 錢包",
+			"last4": null,
+			"currency": "SGD",
+			"alerts_expected": false,
+			"wallet": { "since": "2026-01-01", "opening_balance": "0.00", "precounted": "0.00" }
+		},
+		{
+			"id": "sample-bistro",
+			"institution": "sample-bistro",
+			"kind": "wallet",
+			"name": "Sample Bistro 儲值卡",
+			"last4": null,
+			"currency": "SGD",
+			"alerts_expected": false,
+			"has_statements": false,
+			"wallet": {
+				"since": "2026-01-01",
+				"opening_balance": "0.00",
+				"precounted": "0.00",
+				"topup": { "merchant": "SAMPLE BISTRO", "whole_dollars": true, "deal": { "paid": "200.00", "credit": "240.00" } },
+				"spend_category": "Food",
+				"sms": { "keywords": ["SAMPLE BISTRO"], "sender": "RestoSuite" }
+			}
+		},
+		{
+			"id": "cash",
+			"institution": "cash",
+			"kind": "cash",
+			"name": "Cash",
+			"last4": null,
+			"currency": "SGD",
+			"alerts_expected": false,
+			"has_statements": false
+		}
+	]
+}

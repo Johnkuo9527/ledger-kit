@@ -1,0 +1,8 @@
+node_modules/
+.wrangler/
+.dev.vars
+# Your own accounts: personal, never committed (seed/accounts.example.json is the template).
+seed/accounts.json
+seed/accounts.sql
+# What scripts/setup.sh remembers between runs (no secrets).
+.setup-state

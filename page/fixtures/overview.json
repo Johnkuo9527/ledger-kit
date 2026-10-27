@@ -1,0 +1,350 @@
+{
+	"ok": true,
+	"month": "2026-09",
+	"from": "2026-09-01",
+	"to": "2026-09-30",
+	"totals": {
+		"spending_home": {
+			"currency": "SGD",
+			"minor": 194702,
+			"display": "SGD 1,947.02"
+		},
+		"count": 30,
+		"unconfirmed_home": {
+			"currency": "SGD",
+			"minor": 79599,
+			"display": "SGD 795.99"
+		},
+		"missing_rate_count": 1
+	},
+	"categories": [
+		{
+			"category": "lodging",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 44975,
+				"display": "SGD 449.75"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 39175,
+				"display": "SGD 391.75"
+			},
+			"count": 2
+		},
+		{
+			"category": "shopping",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 36610,
+				"display": "SGD 366.10"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 33310,
+				"display": "SGD 333.10"
+			},
+			"count": 5
+		},
+		{
+			"category": "dining",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 31610,
+				"display": "SGD 316.10"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 6310,
+				"display": "SGD 63.10"
+			},
+			"count": 8
+		},
+		{
+			"category": "transport",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 22795,
+				"display": "SGD 227.95"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"count": 4
+		},
+		{
+			"category": "fees",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 19620,
+				"display": "SGD 196.20"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"count": 1
+		},
+		{
+			"category": "groceries",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 14756,
+				"display": "SGD 147.56"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 804,
+				"display": "SGD 8.04"
+			},
+			"count": 4
+		},
+		{
+			"category": "utilities",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 14235,
+				"display": "SGD 142.35"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"count": 1
+		},
+		{
+			"category": "subscriptions",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 6886,
+				"display": "SGD 68.86"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"count": 4
+		},
+		{
+			"category": "health",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 3215,
+				"display": "SGD 32.15"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"count": 1
+		}
+	],
+	"by_account": [
+		{
+			"account_id": "acc-demo-hsbc-a",
+			"name": "HSBC card A",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 76570,
+				"display": "SGD 765.70"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 39175,
+				"display": "SGD 391.75"
+			},
+			"count": 7
+		},
+		{
+			"account_id": "acc-demo-citi",
+			"name": "Citi card",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 41173,
+				"display": "SGD 411.73"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"count": 7
+		},
+		{
+			"account_id": "acc-demo-hsbc-b",
+			"name": "HSBC card B",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 22664,
+				"display": "SGD 226.64"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 14914,
+				"display": "SGD 149.14"
+			},
+			"count": 7
+		},
+		{
+			"account_id": "acc-demo-taishin-a",
+			"name": "Taishin card A",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 21256,
+				"display": "SGD 212.56"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 21256,
+				"display": "SGD 212.56"
+			},
+			"count": 1
+		},
+		{
+			"account_id": "acc-demo-dbs",
+			"name": "DBS account",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 18235,
+				"display": "SGD 182.35"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"count": 2
+		},
+		{
+			"account_id": "acc-demo-dbs-debit",
+			"name": "DBS debit card",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 10550,
+				"display": "SGD 105.50"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"count": 3
+		},
+		{
+			"account_id": "acc-demo-cash",
+			"name": "Cash",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 4254,
+				"display": "SGD 42.54"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 4254,
+				"display": "SGD 42.54"
+			},
+			"count": 2
+		},
+		{
+			"account_id": "acc-demo-taishin-b",
+			"name": "Taishin card B",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"count": 1
+		}
+	],
+	"coverage": [
+		{
+			"account_id": "acc-demo-dbs",
+			"mode": "live",
+			"complete_through": null,
+			"last_statement_date": "2026-09-30",
+			"last_tap_date": null,
+			"partial": false,
+			"message": "DBS account: up to date"
+		},
+		{
+			"account_id": "acc-demo-dbs-debit",
+			"mode": "live",
+			"complete_through": null,
+			"last_statement_date": "2026-09-30",
+			"last_tap_date": "2026-09-05",
+			"partial": false,
+			"message": "DBS debit card: up to date"
+		},
+		{
+			"account_id": "acc-demo-hsbc-a",
+			"mode": "live",
+			"complete_through": null,
+			"last_statement_date": "2026-09-25",
+			"last_tap_date": "2026-09-29",
+			"partial": false,
+			"message": "HSBC card A: up to date"
+		},
+		{
+			"account_id": "acc-demo-hsbc-b",
+			"mode": "live",
+			"complete_through": null,
+			"last_statement_date": "2026-09-04",
+			"last_tap_date": "2026-10-03",
+			"partial": false,
+			"message": "HSBC card B: up to date"
+		},
+		{
+			"account_id": "acc-demo-citi",
+			"mode": "live",
+			"complete_through": null,
+			"last_statement_date": "2026-09-30",
+			"last_tap_date": "2026-09-12",
+			"partial": false,
+			"message": "Citi card: up to date"
+		},
+		{
+			"account_id": "acc-demo-taishin-a",
+			"mode": "statement_only",
+			"complete_through": "2026-09-15",
+			"last_statement_date": "2026-09-15",
+			"last_tap_date": "2026-09-17",
+			"partial": true,
+			"next_statement_due": "2026-10-15",
+			"overdue": false,
+			"overdue_reason": null,
+			"message": "Taishin card A: up to date as of the statement of 2026-09-15; after that, only Apple Pay taps; spending after it comes with the next statement (closing about 2026-10-15) — not yet known, not zero"
+		},
+		{
+			"account_id": "acc-demo-taishin-b",
+			"mode": "statement_only",
+			"complete_through": "2026-09-10",
+			"last_statement_date": "2026-09-10",
+			"last_tap_date": "2026-09-30",
+			"partial": true,
+			"next_statement_due": "2026-10-10",
+			"overdue": false,
+			"overdue_reason": null,
+			"message": "Taishin card B: up to date as of the statement of 2026-09-10; after that, only Apple Pay taps; spending after it comes with the next statement (closing about 2026-10-10) — not yet known, not zero"
+		},
+		{
+			"account_id": "acc-demo-cash",
+			"mode": "manual",
+			"complete_through": null,
+			"last_statement_date": null,
+			"last_tap_date": null,
+			"partial": false,
+			"message": "Cash: only what you have added"
+		}
+	]
+}

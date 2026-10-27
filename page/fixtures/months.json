@@ -1,0 +1,172 @@
+{
+	"ok": true,
+	"months": [
+		{
+			"statement_id": "st-demo-hsbc-a-0925",
+			"account_id": "acc-demo-hsbc-a",
+			"period_start": "2026-08-26",
+			"period_end": "2026-09-25",
+			"status": "reconciled",
+			"checked_at": "2026-10-08T22:10:00.000Z",
+			"expected": {
+				"currency": "SGD",
+				"minor": 241755,
+				"display": "SGD 2,417.55"
+			},
+			"ledger": {
+				"currency": "SGD",
+				"minor": 241755,
+				"display": "SGD 2,417.55"
+			},
+			"difference": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"problems": [],
+			"bill_check": null,
+			"bill": null,
+			"reviewed_at": null
+		},
+		{
+			"statement_id": "st-demo-hsbc-b-0904",
+			"account_id": "acc-demo-hsbc-b",
+			"period_start": "2026-08-05",
+			"period_end": "2026-09-04",
+			"status": "reconciled",
+			"checked_at": "2026-10-08T22:10:00.000Z",
+			"expected": {
+				"currency": "SGD",
+				"minor": 61240,
+				"display": "SGD 612.40"
+			},
+			"ledger": {
+				"currency": "SGD",
+				"minor": 61240,
+				"display": "SGD 612.40"
+			},
+			"difference": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"problems": [],
+			"bill_check": null,
+			"bill": null,
+			"reviewed_at": null
+		},
+		{
+			"statement_id": "st-demo-citi-0930",
+			"account_id": "acc-demo-citi",
+			"period_start": "2026-09-01",
+			"period_end": "2026-09-30",
+			"status": "escalated",
+			"checked_at": "2026-10-08T22:10:00.000Z",
+			"expected": {
+				"currency": "SGD",
+				"minor": 61377,
+				"display": "SGD 613.77"
+			},
+			"ledger": {
+				"currency": "SGD",
+				"minor": 60177,
+				"display": "SGD 601.77"
+			},
+			"difference": {
+				"currency": "SGD",
+				"minor": -1200,
+				"display": "−SGD 12.00"
+			},
+			"problems": [
+				{
+					"code": "ledger_mismatch",
+					"message": "the ledger is SGD 12.00 short of the statement",
+					"ids": []
+				},
+				{
+					"code": "unmatched_statement_line",
+					"message": "one statement line has no ledger line yet",
+					"ids": [
+						"ev-demo-1"
+					]
+				}
+			],
+			"bill_check": null,
+			"bill": null,
+			"reviewed_at": null
+		},
+		{
+			"statement_id": "st-demo-dbs-0930",
+			"account_id": "acc-demo-dbs",
+			"period_start": "2026-09-01",
+			"period_end": "2026-09-30",
+			"status": "reconciled",
+			"checked_at": "2026-10-08T22:10:00.000Z",
+			"expected": {
+				"currency": "SGD",
+				"minor": 512310,
+				"display": "SGD 5,123.10"
+			},
+			"ledger": {
+				"currency": "SGD",
+				"minor": 512310,
+				"display": "SGD 5,123.10"
+			},
+			"difference": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"problems": [],
+			"bill_check": null,
+			"bill": null,
+			"reviewed_at": null
+		},
+		{
+			"statement_id": "st-demo-taishin-a-0915",
+			"account_id": "acc-demo-taishin-a",
+			"period_start": "2026-08-16",
+			"period_end": "2026-09-15",
+			"status": "reconciled",
+			"checked_at": "2026-10-08T22:10:00.000Z",
+			"expected": {
+				"currency": "TWD",
+				"minor": 1184000,
+				"display": "TWD 11,840.00"
+			},
+			"ledger": {
+				"currency": "TWD",
+				"minor": 1184000,
+				"display": "TWD 11,840.00"
+			},
+			"difference": {
+				"currency": "TWD",
+				"minor": 0,
+				"display": "TWD 0.00"
+			},
+			"problems": [],
+			"bill_check": null,
+			"bill": null,
+			"reviewed_at": null
+		},
+		{
+			"statement_id": "st-demo-taishin-b-0910",
+			"account_id": "acc-demo-taishin-b",
+			"period_start": "2026-08-11",
+			"period_end": "2026-09-10",
+			"status": "pending",
+			"checked_at": "2026-10-08T22:10:00.000Z",
+			"expected": null,
+			"ledger": {
+				"currency": "TWD",
+				"minor": 0,
+				"display": "TWD 0.00"
+			},
+			"difference": null,
+			"problems": [],
+			"bill_check": null,
+			"bill": null,
+			"reviewed_at": null
+		}
+	]
+}

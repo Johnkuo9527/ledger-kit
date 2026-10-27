@@ -1,0 +1,141 @@
+# The ledger worker. A TEMPLATE: the two ids marked REPLACE are filled in once,
+# by scripts/setup.sh (or by hand: docs/manual-setup.md). No secret ever goes in
+# this file — secrets are typed by you with `wrangler secret put`.
+#
+# Run every wrangler command from worker/ (where wrangler is installed),
+# pointing at this file:  npx wrangler <command> -c ../wrangler.toml
+#
+# Needs the Workers PAID plan (US$5/month): the every-minute tick opens statement
+# PDFs and makes up to LEDGER_TICK_D1_BUDGET database queries, far beyond the
+# Free plan's 10 ms of CPU and 50 queries per run. See INSTALL.md "Requirements".
+
+name = "ledger"
+main = "worker/src/index.ts"
+compatibility_date = "2026-07-02"
+# global_fetch_strictly_public: the worker can only fetch public addresses
+# (Resend, Gmail, the Claude API and the two exchange-rate feeds), and it turns on the OAuth library's Client ID
+# Metadata Documents, the newer way an AI client can identify itself.
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
+
+# The page (page/) is bundled INTO the worker before every deploy and
+# served only behind the unlock cookie — never as public static assets.
+# --require-index: a deploy with no page/index.html is refused.
+# The command runs in the folder wrangler was started from, which is why every
+# command is run from worker (`npm run deploy` always is).
+[build]
+command = "node build-page.mjs --require-index"
+
+[observability]
+enabled = true
+
+# Secrets travel in some addresses: the unlock link (/unlock?key=…) and the
+# connector's sign-in. Cloudflare's per-request "invocation logs" (and traces)
+# record every full address, so both are OFF. Only the worker's own
+# console.error lines are kept, and those never print an address or a key.
+[observability.logs]
+enabled = true
+invocation_logs = false
+
+[observability.traces]
+enabled = false
+
+# The ledger's OWN database. Created by `npx wrangler d1 create ledger-db`.
+[[d1_databases]]
+binding = "LEDGER_DB"
+database_name = "ledger-db"
+database_id = "REPLACE-WITH-YOUR-D1-DATABASE-ID"
+migrations_dir = "migrations"
+
+# The OAuth library's store for the claude.ai connectors (clients, grants, tokens).
+# Created by `npx wrangler kv namespace create LEDGER_OAUTH`.
+[[kv_namespaces]]
+binding = "OAUTH_KV"
+id = "REPLACE-WITH-YOUR-KV-NAMESPACE-ID"
+
+[vars]
+# YOUR HOME, chosen once (scripts/setup.sh stage 3 asks; INSTALL.md step 1):
+#   the currency every total is kept in (ISO 4217: SGD, EUR, USD, GBP, JPY, TWD, AUD …),
+#   the time zone every "day" is counted in (IANA: Asia/Singapore, Europe/London, America/New_York …),
+#   the country "abroad" starts outside of (ISO 3166: SG, GB, DE, US, JP …) — trips and overseas fees.
+# Until all three are set the worker refuses every request and does nothing.
+# The currency is for good: once the ledger holds money, changing it stops the
+# daily engine with an alarm (amounts would be relabelled, not converted).
+LEDGER_HOME_CURRENCY = "REPLACE-WITH-YOUR-CURRENCY"
+LEDGER_TIMEZONE = "REPLACE-WITH-YOUR-TIME-ZONE"
+LEDGER_HOME_COUNTRY = "REPLACE-WITH-YOUR-COUNTRY"
+
+# YOUR LANGUAGE: the words of the page, the alarms, the iPhone Shortcut replies
+# and the connector's messages — "en" (English) or "zh-Hant" (Traditional
+# Chinese). Money and days are written the way it and your country write them.
+# Anything else stops every request with what to set. It can be changed later;
+# notes the ledger already wrote stay in the language they were written in.
+LEDGER_LANGUAGE = "en"
+
+# Who the sign-in code and alarm emails come from. resend.dev's shared sender
+# only delivers to the address your Resend account is registered under.
+LEDGER_MAIL_FROM = "Ledger <onboarding@resend.dev>"
+
+# Who reads the mail:
+# "subscription" calls no model at all — every reading becomes a task that your
+#   two "Ledger Reader" routines in claude.ai answer through /mcp-reader
+#   (routines/). The model ids, caps, credit and approvals below are not used.
+# "api" calls the Claude API with the ANTHROPIC_API_KEY secret, paid per use
+#   from your Anthropic credit; the caps below apply.
+LEDGER_READER = "subscription"
+
+# ---- API mode only. The models, by id (never written in code): the senior
+# reads the backfill and answers what the daily one is unsure of.
+LEDGER_MODEL_SENIOR = "claude-opus-5-5"
+LEDGER_MODEL_DAILY = "claude-sonnet-5-5"
+# The most the DAILY reading may spend on Claude per day (US$).
+LEDGER_DAILY_SPEND_CAP_USD = "3"
+# Of that, the part kept for reading NEW bank emails (US$): statements, receipts
+# and everything else stop this far short of the cap.
+LEDGER_DAILY_MAIL_RESERVE_USD = "1"
+# The most receipts (mail that is not from a bank) the daily reading sends to
+# Claude per day; bank mail always goes first and is never limited.
+LEDGER_RECEIPTS_PER_DAY = "30"
+# Your Anthropic credit: what you last topped up to, the day you did it, and
+# the "running low" line that raises the alarm.
+LEDGER_API_CREDIT_USD = "25"
+LEDGER_API_CREDIT_SINCE = "2026-01-01"
+LEDGER_API_CREDIT_LOW_USD = "5"
+
+# ---- Both modes.
+# Your spending categories (comma-separated). Every spending line ends in one
+# of them. This only seeds the list: once you add, rename or delete a category
+# on the page, the page's list wins. A category's name is shown as written, never
+# translated: scripts/setup.sh replaces this English list with the Traditional
+# Chinese one (餐飲, 超市 … 其他) when you choose zh-Hant.
+LEDGER_CATEGORIES = "Food, Supermarket, Drinks, Transportation, Grab/Uber, Shopping, Clothes, Entertainment, Subscriptions, Healthcare, Insurance, Rent, Utilities, Gifts, Travel, Others"
+# Mail to skip by subject (comma-separated pieces of the subject); empty = none.
+# Only for a bank that sends something you do not track from the SAME address as
+# what you do. Example: 台新 (Taiwan) sends its bank-account statement, subject
+# "綜合對帳單", from the address of its card bills: "綜合對帳單" here skips it.
+# Any bank's mail whose subject holds one of these pieces is never read.
+LEDGER_IGNORE_SUBJECTS = ""
+# Currencies to keep daily exchange rates for, each against your home currency
+# (your home currency itself is left out by the worker, whatever this says).
+LEDGER_FX_CURRENCIES = "USD,EUR,JPY,GBP,AUD,CNY,HKD,KRW,THB,MYR,IDR,TWD,SGD"
+# How far back the first read of your mailbox reaches, in months, counted from
+# the month it starts. Raising it later reads only the extra older months.
+LEDGER_BACKFILL_MONTHS = "12"
+# D1 queries one tick may make (Workers Paid allows 1,000; pages keep 40).
+LEDGER_TICK_D1_BUDGET = "400"
+# Seconds after which a tick starts no new work (it must stay inside
+# Cloudflare's time limit for a cron that fires every minute).
+LEDGER_TICK_WALL_SECONDS = "480"
+# NOT here on purpose (API mode only, set with `wrangler secret put` because a
+# var and a secret cannot share a name): LEDGER_BACKFILL_APPROVED_USD (your yes
+# to the dry run's price), LEDGER_BACKFILL_EXTRA_APPROVED_USD (older months
+# added later), LEDGER_CATCHUP_APPROVED_USD (statements you upload).
+
+# Every minute: the tick decides what, if anything, there is to do (Gmail is
+# checked every 15 minutes; today's bank emails are always read first).
+[triggers]
+crons = ["* * * * *"]
+
+# CPU: a cron firing more often than hourly gets 30 s of CPU on Workers Paid
+# (wall time 15 min). A tick opens at most 20 PDFs (worker/src/tick.ts), well inside.
+[limits]
+cpu_ms = 30000

@@ -1,0 +1,8 @@
+# A throwaway worker that runs ONLY src/pdf.ts inside Cloudflare's real
+# runtime (workerd), on this computer. Never deployed: no database, no secrets.
+#   cd worker && npx wrangler dev -c test/workerd/wrangler.toml --local --port 8788
+#   curl -X POST --data-binary @test/fixtures/statement-aes-256.pdf "http://127.0.0.1:8788/?pw=made-up-pw-1234"
+name = "ledger-pdf-probe"
+main = "pdf-probe.ts"
+compatibility_date = "2026-07-02"
+compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]

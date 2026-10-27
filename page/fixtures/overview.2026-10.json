@@ -1,0 +1,205 @@
+{
+	"ok": true,
+	"month": "2026-10",
+	"from": "2026-10-01",
+	"to": "2026-10-31",
+	"totals": {
+		"spending_home": {
+			"currency": "SGD",
+			"minor": 38875,
+			"display": "SGD 388.75"
+		},
+		"count": 4,
+		"unconfirmed_home": {
+			"currency": "SGD",
+			"minor": 1162,
+			"display": "SGD 11.62"
+		},
+		"missing_rate_count": 0
+	},
+	"categories": [
+		{
+			"category": "flights",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 28900,
+				"display": "SGD 289.00"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"count": 1
+		},
+		{
+			"category": "groceries",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 6215,
+				"display": "SGD 62.15"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"count": 1
+		},
+		{
+			"category": "subscriptions",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 2598,
+				"display": "SGD 25.98"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"count": 1
+		},
+		{
+			"category": "transport",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 1162,
+				"display": "SGD 11.62"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 1162,
+				"display": "SGD 11.62"
+			},
+			"count": 1
+		}
+	],
+	"by_account": [
+		{
+			"account_id": "acc-demo-hsbc-a",
+			"name": "HSBC card A",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 31498,
+				"display": "SGD 314.98"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"count": 2
+		},
+		{
+			"account_id": "acc-demo-hsbc-b",
+			"name": "HSBC card B",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 6215,
+				"display": "SGD 62.15"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 0,
+				"display": "SGD 0.00"
+			},
+			"count": 1
+		},
+		{
+			"account_id": "acc-demo-citi",
+			"name": "Citi card",
+			"spending_home": {
+				"currency": "SGD",
+				"minor": 1162,
+				"display": "SGD 11.62"
+			},
+			"unconfirmed_home": {
+				"currency": "SGD",
+				"minor": 1162,
+				"display": "SGD 11.62"
+			},
+			"count": 1
+		}
+	],
+	"coverage": [
+		{
+			"account_id": "acc-demo-dbs",
+			"mode": "live",
+			"complete_through": null,
+			"last_statement_date": "2026-09-30",
+			"last_tap_date": null,
+			"partial": false,
+			"message": "DBS account: up to date"
+		},
+		{
+			"account_id": "acc-demo-dbs-debit",
+			"mode": "live",
+			"complete_through": null,
+			"last_statement_date": "2026-09-30",
+			"last_tap_date": "2026-09-05",
+			"partial": false,
+			"message": "DBS debit card: up to date"
+		},
+		{
+			"account_id": "acc-demo-hsbc-a",
+			"mode": "live",
+			"complete_through": null,
+			"last_statement_date": "2026-09-25",
+			"last_tap_date": "2026-09-29",
+			"partial": false,
+			"message": "HSBC card A: up to date"
+		},
+		{
+			"account_id": "acc-demo-hsbc-b",
+			"mode": "live",
+			"complete_through": null,
+			"last_statement_date": "2026-09-04",
+			"last_tap_date": "2026-10-03",
+			"partial": false,
+			"message": "HSBC card B: up to date"
+		},
+		{
+			"account_id": "acc-demo-citi",
+			"mode": "live",
+			"complete_through": null,
+			"last_statement_date": "2026-09-30",
+			"last_tap_date": "2026-09-12",
+			"partial": false,
+			"message": "Citi card: up to date"
+		},
+		{
+			"account_id": "acc-demo-taishin-a",
+			"mode": "statement_only",
+			"complete_through": "2026-09-15",
+			"last_statement_date": "2026-09-15",
+			"last_tap_date": "2026-09-17",
+			"partial": true,
+			"next_statement_due": "2026-10-15",
+			"overdue": false,
+			"overdue_reason": null,
+			"message": "Taishin card A: up to date as of the statement of 2026-09-15; after that, only Apple Pay taps; spending after it comes with the next statement (closing about 2026-10-15) — not yet known, not zero"
+		},
+		{
+			"account_id": "acc-demo-taishin-b",
+			"mode": "statement_only",
+			"complete_through": "2026-09-10",
+			"last_statement_date": "2026-09-10",
+			"last_tap_date": "2026-09-30",
+			"partial": true,
+			"next_statement_due": "2026-10-10",
+			"overdue": false,
+			"overdue_reason": null,
+			"message": "Taishin card B: up to date as of the statement of 2026-09-10; after that, only Apple Pay taps; spending after it comes with the next statement (closing about 2026-10-10) — not yet known, not zero"
+		},
+		{
+			"account_id": "acc-demo-cash",
+			"mode": "manual",
+			"complete_through": null,
+			"last_statement_date": null,
+			"last_tap_date": null,
+			"partial": false,
+			"message": "Cash: only what you have added"
+		}
+	]
+}

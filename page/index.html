@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#f4f4f1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d0d0d" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Ledger">
+<title>Ledger</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232a78d6'/%3E%3Crect x='8' y='17' width='4' height='8' rx='1.5' fill='white'/%3E%3Crect x='14' y='11' width='4' height='14' rx='1.5' fill='white'/%3E%3Crect x='20' y='7' width='4' height='18' rx='1.5' fill='white' opacity='.6'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <a class="brand" href="#/overview" data-say="app.name">Ledger</a>
+    <nav class="tabs" aria-label="Main" data-say-aria="nav.main">
+      <a class="tab" href="#/overview" data-tab="overview"><span class="ti" data-icon="overview"></span><span data-say="tab.overview">Overview</span></a>
+      <a class="tab" href="#/lines" data-tab="lines"><span class="ti" data-icon="lines"></span><span data-say="tab.lines">Transactions</span></a>
+      <a class="tab" href="#/trips" data-tab="trips"><span class="ti" data-icon="trips"></span><span data-say="tab.trips">Trips</span></a>
+      <a class="tab" href="#/subs" data-tab="subs"><span class="ti" data-icon="subs"></span><span data-say="tab.subs">Subscriptions</span></a>
+      <a class="tab" href="#/ok" data-tab="ok"><span class="ti" data-icon="ok"></span><span data-say="tab.ok">To review</span><b class="badge" id="ok-badge" hidden></b></a>
+    </nav>
+    <div class="top-actions">
+      <button class="btn btn-primary" type="button" data-action="open-cash"><span data-icon="plus"></span><span data-say="cash.cash">Cash</span></button>
+      <button class="icon-btn" type="button" data-action="theme" aria-label="Switch light/dark" title="Switch light/dark" data-say-aria="theme.switch" data-say-title="theme.switch"><span data-icon="theme"></span></button>
+    </div>
+  </div>
+</header>
+<div class="demo" id="demo" hidden data-say="demo.banner">Demo: everything below is made up, not your money.</div>
+<div class="engine" id="engine" hidden></div>
+<main id="view" tabindex="-1" aria-live="polite"></main>
+
+<dialog id="cash" aria-labelledby="cash-title">
+  <form id="cash-form" method="dialog" novalidate>
+    <div class="sheet-head">
+      <h2 id="cash-title" data-say="cash.title">Record cash</h2>
+      <button class="icon-btn" type="button" data-action="close-cash" aria-label="Close" data-say-aria="close"><span data-icon="close"></span></button>
+    </div>
+    <div class="seg mini" id="cash-from" role="tablist" aria-label="Paid from" data-say-aria="cash.from" hidden>
+      <button type="button" class="seg-b" role="tab" aria-selected="true" data-action="cash-from" data-v="cash" data-say="cash.cash">Cash</button>
+      <!-- one tab per wallet, filled by app.js openCash -->
+    </div>
+    <label class="field">
+      <span data-say="cash.quick">Quick entry</span>
+      <input name="quick" autocomplete="off" placeholder="e.g. ramen ¥1,200" data-say-placeholder="cash.quick_eg" enterkeyhint="next">
+      <small class="muted" data-say="cash.quick_note">Type one line; the fields below fill themselves, and you can still change them.</small>
+    </label>
+    <div class="field-row">
+      <label class="field grow"><span data-say="cash.merchant">Shop / what for</span><input name="merchant" required autocomplete="off"></label>
+    </div>
+    <div class="field-row">
+      <label class="field grow"><span data-say="act.amount">Amount</span><input name="amount" required inputmode="decimal" autocomplete="off" placeholder="1200"></label>
+      <label class="field"><span data-say="cash.currency">Currency</span><select name="currency"></select></label>
+    </div>
+    <div class="field-row">
+      <label class="field grow"><span data-say="cash.date">Date</span><input name="date" type="date" required></label>
+    </div>
+    <div class="field"><span data-say="cash.category">Category (optional)</span><button class="cat-btn" type="button" id="cash-cat" data-action="cash-cat" aria-haspopup="dialog"></button><input type="hidden" name="category"></div>
+    <label class="field"><span data-say="cash.note">Note (optional)</span><input name="note" autocomplete="off"></label>
+    <p class="muted small" id="cash-hint"></p>
+    <p class="form-error" id="cash-error" role="alert" hidden></p>
+    <div class="sheet-actions">
+      <button class="btn" type="button" data-action="close-cash" data-say="cancel">Cancel</button>
+      <button class="btn btn-primary" type="submit" id="cash-submit" data-say="cash.submit">Record</button>
+    </div>
+  </form>
+</dialog>
+
+<dialog id="sheet" aria-labelledby="sheet-title"><div class="sheet" id="sheet-body"></div></dialog>
+
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<div class="toast" id="toast" role="status" hidden></div>
+<script src="words.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
